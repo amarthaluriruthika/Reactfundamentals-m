@@ -58,6 +58,10 @@ const handleClick=(name)=>{
   
   alert("Hello"+name )
 }
+const handleChange=(event)=>{
+  console.log(event.target.name)
+   console.log(event.target.value)
+}
 
   return (
     <div >
@@ -87,7 +91,9 @@ const handleClick=(name)=>{
         ))
       } */}
       <p>I am a button</p>
-      <button onClick={()=>handleClick("Ruthika")}> Click me</button>
+      <input type="text" name="Email"placeholder="Enter your email" onChange={handleChange} />
+      <input type="password" name="password"placeholder="Enter your password" onChange={handleChange} />
+      <button onClick={()=>handleClick("Ruthika")}>Login</button>
 
 
     </div>)
