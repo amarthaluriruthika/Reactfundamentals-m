@@ -1,28 +1,98 @@
 // import "./App.css"
 // import Idcard from "./Idcard.jsx"
-import Productcard from "./Productcard.jsx"
+// import BlogPost from "./BlogPost.jsx"
+// import Productcard from "./Productcard.jsx"
 // import Profile from "./Profile.jsx"
 function App() {
-  // c
-  const product={
-    name:"watch",
-    price:499,
-    isAvailable:true
-  }
+  // const person = {
+  //   name: "A.Ruthika",
+  //   course: "B.Tech",
+  //   rollNo: "24VV1A0504",
+  //   bloodGroup: "o+ve",
+  //   dob: "18/05/05"
+  // }
+  // return (
+  //   <div>
+
+  //     <Idcard name={person.name} course={person.course} rollNo={person.rollNo} bloodGroup={person.bloodGroup} dob={person.dob} />
+
+
+  //   </div>
+  // )}
+
+  // const products = [{
+  //   productName: "Product 1",
+  //   price: 3000,
+  //   isAvailable: true
+  // }, {
+  //   productName: "Product 2",
+  //   price: 1300,
+  //   isAvailable: true
+
+  // },
+  // {
+  //   productName: "Product 3",
+  //   price: 3870,
+  //   isAvailable: true
+  // }]
+//   const posts=[{
+//     id:1,
+//     author:"Ravi Chandra",
+//     title:"the boy",
+//     description:"a great times"
+//   },
+// {
+//   id:2,
+//   author:"Gaurav",
+//     title:"the sands of time",
+//     description:"once upon a time"
+
+// },
+// {
+//   id:3,
+//   author:"Neetu Priya",
+//     title:"vatican city",
+//     description:"the never ending mystery"
+// }]
+const handleClick=(name)=>{
+  
+  alert("Hello"+name )
+}
 
   return (
     <div >
-      <Productcard name={product.name} price={product.price} available={product.isAvailable} />
-      <Productcard name={product.name} price={product.price} available={product.isAvailable == false} />
+      {/* <Productcard name={product.name} price={product.price} available={product.isAvailable} />
+      {/* <Productcard name={product.name} price={product.price} available={product.isAvailable == false} /> */}
 
 
       {/* <div className="">
-   <Idcard name={person.name} course={person.course} rollNo={person.rollNo} bloodGroup={person.bloodGroup} dob={person.dob}/> */}
+ <Idcard name={person.name} course={person.course} rollNo={person.rollNo} bloodGroup={person.bloodGroup} dob={person.dob}/> */}
+      {/* {
+        products.map((product) => (
+          < Productcard
+            name={product.productName}
+            price={product.price}
+            isAvailable={product.isAvailable}
+          />))
+      } */} 
+      {/* {
+        posts.map((post)=>(
+          <BlogPost
+          key={post.id}
+          author={post.author}
+          title={post.title}
+          description={post.description}
+          />
+ 
+        ))
+      } */}
+      <p>I am a button</p>
+      <button onClick={()=>handleClick("Ruthika")}> Click me</button>
 
-    </div>
-   
 
-  )
+    </div>)
 }
 
+
 export default App
+

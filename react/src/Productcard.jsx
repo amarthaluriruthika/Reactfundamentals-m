@@ -22,7 +22,7 @@ function Productcard(product) {
 
     return (
         <div style={containerStyle}>
-            <p style={titleStyle}>Name:{product.name}</p>
+            <p style={titleStyle}>Productname:{product.name}</p>
             <p style={priceStyle}>price={product.price}</p>
             <p>
                 {product.available === true ? <p className="stock">In stock</p>
