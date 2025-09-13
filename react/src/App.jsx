@@ -58,17 +58,26 @@ function App() {
 const [count,setCount]=useState(0)
 const [email,setEmail]=useState("")
 const [password,setPassword]=useState("")
+const [formData,setformData]=useState({
+  email:"",
+  password:""
+})
 const handleClick=(name)=>{
   
   alert("Hello"+name )
 }
 const handleChange=(event)=>{
-  console.log(event.target.name)
-   console.log(event.target.value)
+  // console.log(event.target.name)
+  //  console.log(event.target.value)
+  setformData({
+    ...formData,
+    [event.target.name]:event.target.value
+    
+  })
 }
 const handleSubmit=(event)=>{
   event.preventDefault();
-  alert(`Email:${email}\n Password:${password}\nYou are logged in`)
+  alert(`Email:${formData.email}\n Password:${formData.password}\nYou are logged in`)
 }
 
 
@@ -115,8 +124,8 @@ console.log(count)
       <p>{count}</p>
       <button onClick={handleIncrement}>Increment</button>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="Email"placeholder="Enter your email" onChange={handleEmail} />
-      <input type="password" name="password"placeholder="Enter your password" onChange={handlePassword} />
+        <input type="text" name="email"placeholder="Enter your email" onChange={handleChange} />
+      <input type="password" name="password"placeholder="Enter your password" onChange={handleChange} />
       <button type="Submit">Login</button>
       </form>
       {/* <p>I am a button</p> */}
