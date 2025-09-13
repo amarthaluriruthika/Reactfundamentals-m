@@ -3,6 +3,7 @@
 // import BlogPost from "./BlogPost.jsx"
 // import Productcard from "./Productcard.jsx"
 // import Profile from "./Profile.jsx"
+import {useState} from "react"
 function App() {
   // const person = {
   //   name: "A.Ruthika",
@@ -62,7 +63,16 @@ const handleChange=(event)=>{
   console.log(event.target.name)
    console.log(event.target.value)
 }
-
+const handleSubmit=(event)=>{
+  event.preventDefault();
+  alert("You are logged in")
+}
+const [count,setCount]=useState(0)
+const handleIncrement=()=>{
+  
+  setCount((prevCount)=>prevCount+1)
+console.log(count)
+}
   return (
     <div >
       {/* <Productcard name={product.name} price={product.price} available={product.isAvailable} />
@@ -90,10 +100,16 @@ const handleChange=(event)=>{
  
         ))
       } */}
-      <p>I am a button</p>
-      <input type="text" name="Email"placeholder="Enter your email" onChange={handleChange} />
+      <p>{count}</p>
+      <button onClick={handleIncrement}>Increment</button>
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="Email"placeholder="Enter your email" onChange={handleChange} />
       <input type="password" name="password"placeholder="Enter your password" onChange={handleChange} />
-      <button onClick={()=>handleClick("Ruthika")}>Login</button>
+      <button type="Submit">Login</button>
+      </form>
+      {/* <p>I am a button</p> */}
+      
+      {/* <button onClick={()=>handleClick("Ruthika")}>Login</button> */}
 
 
     </div>)
