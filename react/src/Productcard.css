@@ -1,0 +1,27 @@
+.container{
+    margin: 13px;
+    border-radius: 20px;
+    border-color:  grey;
+    border-style: solid;
+    text-align: left;
+}
+.title{
+    font-size: 50px;
+    color: black;
+}
+.price{
+    font-size:30px;
+    color:blue;
+
+}
+.stock{
+    font-size:30px;
+    color:green;
+
+}
+.outstock{
+    font-size: 30px;
+    color:red;
+
+}
+
